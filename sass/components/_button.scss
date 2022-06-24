@@ -1,0 +1,31 @@
+.btn {
+  display: inline-block;
+  min-width: 200px;
+  padding: 10px;
+  @include font($size: 16px, $weight: 700, $line: calc(30 / 16), $letter: 0.06em);
+  color: $color-white;
+  text-align: center;
+  background-color: $color-accent;
+  border-radius: 4px;
+  transition: background-color $transition-time-cubic;
+
+  &-icon {
+    width: 24px;
+    height: 24px;
+    fill: $color-white;
+  }
+
+  &--sub {
+    @include flex($justify: center, $align: center, $column-gap: 10px);
+  }
+
+  &--modal {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent-active;
+  }
+}

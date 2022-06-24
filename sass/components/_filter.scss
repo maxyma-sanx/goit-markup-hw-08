@@ -1,0 +1,21 @@
+.filter {
+  @include flex($wrap: wrap, $justify: center, $gap: 8px);
+}
+
+.filter__btn {
+  display: inline-block;
+  padding: 6px 22px;
+  @include font($size: 16px, $weight: 500, $line: calc(26 / 16), $letter: 0.03em);
+  color: $color-secondary;
+  background-color: $color-whisper;
+  border-radius: 4px;
+  transition: color $transition-time-cubic, background-color $transition-time-cubic,
+    box-shadow $transition-time-cubic;
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+    background-color: $color-accent;
+    box-shadow: $shadow-btn;
+  }
+}

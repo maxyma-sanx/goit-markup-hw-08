@@ -1,0 +1,37 @@
+// Base
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-accent: #2196f3;
+$color-accent-active: #188ce8;
+
+$color-primary: #757575;
+$color-secondary: #212121;
+
+// Secondary
+
+$color-tuna: #2f303a;
+$color-silver: #c4c4c4;
+$color-whisper: #f5f4fa;
+$color-gallery: #eeeeee;
+$color-bombay: #afb1b8;
+
+// Gradient
+
+$gradient-hero-bg: linear-gradient(to right, rgba($color-tuna, 0.4), rgba($color-tuna, 0.4));
+
+// Shadow
+
+$shadow-main: 0px 1px 3px rgba($color-black, 0.12), 0px 1px 1px rgba($color-black, 0.14),
+  0px 2px 1px rgba($color-black, 0.2);
+
+$shadow-portfolio: 0px 1px 1px rgba($color-black, 0.12), 0px 4px 4px rgba($color-black, 0.06),
+  1px 4px 6px rgba($color-black, 0.16);
+
+$shadow-btn: 0px 3px 1px rgba($color-black, 0.1), 0px 1px 2px rgba($color-black, 0.08),
+  0px 2px 2px rgba($color-black, 0.12);
+
+// Animation
+
+$transition-time-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);

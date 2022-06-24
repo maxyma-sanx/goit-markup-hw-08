@@ -1,0 +1,33 @@
+.social {
+  @include flex($wrap: wrap, $justify: center, $column-gap: 10px);
+}
+
+.social__link {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  transition: color $transition-time-cubic, background-color $transition-time-cubic;
+
+  &--light {
+    color: $color-bombay;
+  }
+
+  &--dark {
+    color: $color-white;
+    background-color: rgba($color-white, 0.1);
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+    background-color: $color-accent;
+  }
+}
+
+.social__icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}

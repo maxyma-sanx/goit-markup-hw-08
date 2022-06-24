@@ -1,0 +1,30 @@
+.features__list {
+  @include flex($wrap: wrap, $gap: 30px);
+}
+
+.features__item {
+  max-width: 270px;
+}
+
+.features__container {
+  @include flex($justify: center);
+  padding: 25px 0;
+  margin-bottom: 30px;
+  background-color: $color-whisper;
+}
+
+.features__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.features__title {
+  margin-bottom: 10px;
+  @include font($size: 14px, $line: calc(16 / 14), $letter: 0.03em);
+  text-transform: uppercase;
+  color: $color-secondary;
+}
+
+.features__descr {
+  @include font($size: 14px, $line: calc(24 / 14), $letter: 0.03em);
+}

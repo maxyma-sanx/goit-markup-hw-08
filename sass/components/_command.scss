@@ -1,0 +1,35 @@
+.command {
+  background-color: $color-whisper;
+}
+
+.command__list {
+  @include flex($wrap: wrap, $gap: 30px);
+}
+
+.command__item {
+  max-width: 270px;
+  background-color: $color-white;
+  border-radius: 0 0 4px 4px;
+  box-shadow: $shadow-main;
+}
+
+.command__img {
+  display: block;
+  max-width: 100%;
+}
+
+.command__content {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.command__title {
+  margin-bottom: 10px;
+  @include font($size: 16px, $weight: 500, $line: calc(19 / 16), $letter: 0.03em);
+  color: $color-secondary;
+}
+
+.command__descr {
+  margin-bottom: 16px;
+  @include font($size: 16px, $line: calc(19 / 16), $letter: 0.03em);
+}

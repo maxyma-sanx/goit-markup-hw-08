@@ -1,0 +1,9 @@
+.logo {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  @include font($size: 26px, $weight: 700, $line: calc(31 / 26), $letter: 0.03em);
+}
+
+.logo__text {
+  color: $color-accent;
+}

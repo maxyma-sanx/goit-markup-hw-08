@@ -1,0 +1,30 @@
+.about {
+  padding-top: 3px;
+}
+
+.about__list {
+  @include flex($wrap: wrap, $gap: 30px);
+}
+
+.about__item {
+  position: relative;
+  max-width: 370px;
+}
+
+.about__img {
+  display: block;
+  max-width: 100%;
+}
+
+.about__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 27px 0;
+  @include font($size: 14px, $weight: 700, $line: calc(16 / 14), $letter: 0.03em);
+  color: $color-white;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgba($color-tuna, 0.8);
+}

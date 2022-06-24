@@ -1,0 +1,70 @@
+.footer {
+  padding: 60px 0;
+  background-color: $color-tuna;
+}
+
+.footer__container {
+  @include flex($align: baseline);
+}
+
+.footer__contacts {
+  margin-right: 85px;
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+  color: $color-white;
+}
+
+.footer__address {
+  @include font($size: 14px, $style: normal, $line: calc(24 / 14), $letter: 0.03em);
+}
+
+.footer__info {
+  color: rgba($color-white, 0.6);
+  transition: color $transition-time-cubic;
+
+  &--address {
+    color: $color-white;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.footer__item:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+.footer__title {
+  margin-bottom: 20px;
+  @include font($size: 14px, $weight: 700, $line: calc(16 / 14), $letter: 0.03em);
+  text-transform: uppercase;
+  color: $color-white;
+}
+
+.footer__form {
+  @include flex($dir: column);
+  margin-left: auto;
+}
+
+.footer__sub {
+  @include flex($column-gap: 12px);
+}
+
+.footer__input {
+  min-width: 358px;
+  height: 50px;
+  padding: 0 16px;
+  color: $color-white;
+  background-color: transparent;
+  border: 1px solid rgba($color-white, 0.3);
+  border-radius: 4px;
+
+  &::placeholder {
+    @include font($size: 16px, $line: calc(20 / 16), $letter: 0.03em);
+    color: rgba($color-white, 0.6);
+  }
+}

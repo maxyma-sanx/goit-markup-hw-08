@@ -852,7 +852,7 @@ p {
 }
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .mobile__container {
-    padding: 48px 40px;
+    padding: 48px 25px;
   }
 }
 
@@ -863,7 +863,7 @@ p {
 }
 
 .mobile__list {
-  margin-bottom: 302px;
+  margin-bottom: 308px;
 }
 
 .mobile__item:not(:last-child) {
@@ -882,6 +882,10 @@ p {
   color: #2196f3;
 }
 
+.mobile__contacts {
+  margin-bottom: 65px;
+}
+
 .mobile__phone {
   display: block;
   margin-bottom: 32px;
@@ -894,7 +898,6 @@ p {
 
 .mobile__email {
   display: block;
-  margin-bottom: 64px;
   font-size: 24px;
   font-weight: 500;
   line-height: 1.1666666667;
@@ -905,10 +908,18 @@ p {
   color: #2196f3;
 }
 
-.mobile__social-item::after {
+.mobile__social-item {
+  position: relative;
+}
+
+.mobile__social-item:not(:last-child)::after {
   content: "";
-  width: 22px;
-  height: 1px;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  display: block;
+  width: 1px;
+  height: 22px;
   background-color: rgba(33, 33, 33, 0.2);
 }
 

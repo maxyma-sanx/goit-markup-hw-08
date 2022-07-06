@@ -4,11 +4,41 @@
 }
 
 .footer__container {
-  @include flex($align: baseline);
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.footer__details {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
+    gap: 172px;
+    margin-bottom: 57px;
+    margin-left: 70px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+    align-items: baseline;
+  }
 }
 
 .footer__contacts {
-  margin-right: 85px;
+  @media screen and (max-width: $mobile-max) {
+    margin-bottom: 57px;
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 85px;
+  }
 }
 
 .footer__logo {
@@ -17,7 +47,10 @@
 }
 
 .footer__address {
-  @include font($size: 14px, $style: normal, $line: calc(24 / 14), $letter: 0.03em);
+  font-size: 14px;
+  font-style: normal;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
 }
 
 .footer__info {
@@ -35,36 +68,81 @@
 }
 
 .footer__item:not(:last-child) {
-  margin-bottom: 7px;
+  margin-bottom: 5px;
+}
+
+.footer__social {
+  @media screen and (max-width: $mobile-max) {
+    margin-bottom: 60px;
+  }
+  @media screen and (max-width: $tablet-max) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
+    margin-top: 5px;
+  }
 }
 
 .footer__title {
+  display: block;
   margin-bottom: 20px;
-  @include font($size: 14px, $weight: 700, $line: calc(16 / 14), $letter: 0.03em);
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $color-white;
 }
 
 .footer__form {
-  @include flex($dir: column);
-  margin-left: auto;
+  @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
+    margin-left: 15px;
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    text-align: center;
+  }
 }
 
 .footer__sub {
-  @include flex($column-gap: 12px);
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    column-gap: 12px;
+  }
 }
 
 .footer__input {
-  min-width: 358px;
   height: 50px;
-  padding: 0 16px;
+  padding: 0 15px;
+
   color: $color-white;
+
   background-color: transparent;
   border: 1px solid rgba($color-white, 0.3);
   border-radius: 4px;
 
+  @media screen and (max-width: $mobile-min) {
+    min-width: 100%;
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: $tablet-max) {
+    min-width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-width: 358px;
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    margin-bottom: 20px;
+  }
+
   &::placeholder {
-    @include font($size: 16px, $line: calc(20 / 16), $letter: 0.03em);
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    letter-spacing: 0.03em;
     color: rgba($color-white, 0.6);
   }
 }

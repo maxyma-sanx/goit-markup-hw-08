@@ -1,6 +1,17 @@
 .title {
-  margin-bottom: 50px;
-  @include font($size: 36px, $line: calc(42 / 36), $letter: 0.03em);
   text-align: center;
   color: $color-secondary;
+  letter-spacing: 0.03em;
+
+  @media screen and (max-width: $tablet-max) {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: calc(33 / 28);
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+  }
 }

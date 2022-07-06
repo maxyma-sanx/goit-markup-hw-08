@@ -1,7 +1,18 @@
 .logo {
   display: block;
   font-family: 'Raleway', sans-serif;
-  @include font($size: 26px, $weight: 700, $line: calc(31 / 26), $letter: 0.03em);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+
+  @media screen and (max-width: $tablet-max) {
+    font-size: 24px;
+    line-height: calc(28 / 24);
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: calc(31 / 26);
+  }
 }
 
 .logo__text {

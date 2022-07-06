@@ -1,27 +1,64 @@
 .clients__list {
-  @include flex($wrap: wrap, $gap: 30px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media screen and (max-width: $mobile-max) {
+    justify-content: center;
+  }
 }
 
 .clients__item {
-  max-width: 170px;
-  padding: 15px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid $color-bombay;
   border-radius: 4px;
+  transition: color $transition-time-cubic, border $transition-time-cubic;
+
+  @media screen and (max-width: $mobile-max) {
+    max-width: 210px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: 226px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 170px;
+  }
+
+  &:hover,
+  &:focus-within {
+    border: 1px solid $color-accent;
+  }
+
+  &:hover .clients__link,
+  &:focus-within .clients__link {
+    color: $color-accent;
+    outline: none;
+  }
 }
 
 .clients__link {
+  display: block;
   color: $color-bombay;
   transition: color $transition-time-cubic;
 
-  &:hover,
-  &:focus {
-    color: $color-accent;
+  @media screen and (max-width: $mobile-max) {
+    padding: 15px 52px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 15px 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 15px 32px;
   }
 }
 
 .clients__icon {
   display: block;
-  width: 106px;
-  height: 60px;
   fill: currentColor;
 }

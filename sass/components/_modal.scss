@@ -6,6 +6,7 @@
   height: 100%;
   background-color: rgba($color-black, 0.2);
   opacity: 1;
+  overflow-y: scroll;
   transition: opacity $transition-time-cubic;
 }
 
@@ -19,7 +20,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  min-width: 528px;
+
   padding: 40px;
   background-color: $color-white;
   border-radius: 4px;
@@ -28,6 +29,18 @@
 
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0.7);
+  }
+
+  @media screen and (max-width: $mobile-min) {
+    min-width: calc(100% - 30px);
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: $tablet-max) {
+    min-width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-width: 528px;
   }
 }
 
@@ -43,8 +56,6 @@
 }
 
 .modal__close-icon {
-  width: 11px;
-  height: 11px;
   transition: fill $transition-time-cubic;
 
   .modal__close-btn:hover &,
@@ -55,16 +66,31 @@
 
 .modal__title {
   margin-bottom: 12px;
-  @include font($size: 20px, $line: calc(23 / 20), $letter: 0.03em);
+  font-size: 20px;
+  letter-spacing: 0.03em;
   color: $color-secondary;
   text-align: center;
+
+  @media screen and (max-width: $tablet-max) {
+    line-height: calc(30 / 20);
+  }
+
+  @media screen and (min-width: $desktop) {
+    line-height: calc(23 / 20);
+  }
 }
 
 .modal__label {
   position: relative;
-  @include flex($dir: column, $row-gap: 4px);
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+
   margin-bottom: 10px;
-  @include font($size: 12px, $line: calc(14 / 12), $letter: 0.01em);
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
 
   &:last-child {
     margin-bottom: 20px;
@@ -94,6 +120,9 @@
     resize: none;
 
     &::placeholder {
+      font-size: 14px;
+      line-height: calc(16 / 14);
+      letter-spacing: 0.01em;
       color: rgba($color-primary, 0.5);
     }
   }
@@ -103,8 +132,6 @@
   position: absolute;
   top: 50%;
   left: 12px;
-  width: 18px;
-  height: 18px;
   transition: fill $transition-time-cubic;
 
   .modal__field--input:hover + &,
@@ -115,12 +142,27 @@
 
 .modal__check-label {
   position: relative;
-  @include flex($align: center);
-  padding-left: 37px;
-  margin-bottom: 30px;
-  @include font($size: 14px, $line: calc(24 / 14), $letter: 0.03em);
+  display: flex;
+  align-items: center;
+
+  margin: 20px 0 30px;
+
+  letter-spacing: 0.03em;
+
   cursor: pointer;
   transition: outline $transition-time-cubic;
+
+  @media screen and (max-width: $tablet-max) {
+    padding-left: 25px;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-left: 36px;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
 }
 
 .modal__check-input {
@@ -141,11 +183,13 @@
   cursor: pointer;
   transition: border $transition-time-cubic, background $transition-time-cubic;
 
+  .modal__check-label:hover &,
   .modal__check-label:focus-within & {
-    outline: 1px solid $color-secondary;
+    border: 2px solid $color-accent;
   }
 
   .modal__check-link:focus + & {
+    border: 2px solid $color-secondary;
     outline: none;
   }
 

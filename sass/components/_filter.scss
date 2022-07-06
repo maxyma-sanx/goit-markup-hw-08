@@ -1,17 +1,30 @@
 .filter {
-  @include flex($wrap: wrap, $justify: center, $gap: 8px);
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 15px;
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+  }
 }
 
 .filter__btn {
   display: inline-block;
   padding: 6px 22px;
-  @include font($size: 16px, $weight: 500, $line: calc(26 / 16), $letter: 0.03em);
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: calc(26 / 16);
+  letter-spacing: 0.03em;
   color: $color-secondary;
+
   background-color: $color-whisper;
   border-radius: 4px;
   transition: color $transition-time-cubic, background-color $transition-time-cubic,
     box-shadow $transition-time-cubic;
 
+  &--current,
   &:hover,
   &:focus {
     color: $color-white;

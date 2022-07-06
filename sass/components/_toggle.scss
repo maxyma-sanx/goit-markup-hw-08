@@ -1,0 +1,18 @@
+.toggle {
+  color: $color-secondary;
+  background-color: transparent;
+
+  &__icon {
+    display: block;
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}

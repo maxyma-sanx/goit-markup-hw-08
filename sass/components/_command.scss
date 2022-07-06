@@ -3,33 +3,56 @@
 }
 
 .command__list {
-  @include flex($wrap: wrap, $gap: 30px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .command__item {
-  max-width: 270px;
   background-color: $color-white;
   border-radius: 0 0 4px 4px;
   box-shadow: $shadow-main;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 354px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 270px;
+  }
 }
 
 .command__img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .command__content {
-  padding: 30px 0;
   text-align: center;
+
+  @media screen and (max-width: $tablet-max) {
+    padding: 30px 0 24px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 30px 0 30px;
+  }
 }
 
 .command__title {
   margin-bottom: 10px;
-  @include font($size: 16px, $weight: 500, $line: calc(19 / 16), $letter: 0.03em);
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: calc(19 / 16);
+  letter-spacing: 0.03em;
   color: $color-secondary;
 }
 
 .command__descr {
   margin-bottom: 16px;
-  @include font($size: 16px, $line: calc(19 / 16), $letter: 0.03em);
+  letter-spacing: 0.03em;
+  font-size: 16px;
+  line-height: calc(19 / 16);
 }

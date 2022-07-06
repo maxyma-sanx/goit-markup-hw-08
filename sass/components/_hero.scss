@@ -1,19 +1,61 @@
 .hero {
-  max-width: 1600px;
-  padding: 200px 0;
   margin: 0 auto;
+
   text-align: center;
-  background-image: $gradient-hero-bg, url('../images/main/hero-bg.jpg');
+
+  background-image: $gradient-hero-bg, url('../images/main/hero/hero-bg-mobile.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: $color-silver;
+
+  @media screen and (min-resolution: 2dppx) {
+    background-image: $gradient-hero-bg, url('../images/main/hero/hero-bg-mobile@2x.jpg');
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: $gradient-hero-bg, url('../images/main/hero/hero-bg-tablet.jpg');
+
+    @media screen and (min-resolution: 2dppx) {
+      background-image: $gradient-hero-bg, url('../images/main/hero/hero-bg-tablet@2x.jpg');
+    }
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    padding: 118px 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1600px;
+    padding: 200px 0;
+
+    background-image: $gradient-hero-bg, url('../images/main/hero/hero-bg-desktop.jpg');
+
+    @media screen and (min-resolution: 2dppx) {
+      background-image: $gradient-hero-bg, url('../images/main/hero/hero-bg-desktop@2x.jpg');
+    }
+  }
 }
 
 .hero__title {
-  max-width: 696px;
   margin: 0 auto 30px;
-  @include font($size: 44px, $weight: 900, $line: calc(60 / 44), $letter: 0.06em);
+
+  font-weight: 900;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $color-white;
+
+  @media screen and (max-width: $tablet-max) {
+    max-width: 360px;
+
+    font-size: 26px;
+    line-height: calc(42 / 26);
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 700px;
+
+    font-size: 44px;
+    line-height: calc(60 / 44);
+  }
 }

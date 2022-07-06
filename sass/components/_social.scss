@@ -1,5 +1,8 @@
 .social {
-  @include flex($wrap: wrap, $justify: center, $column-gap: 10px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .social__link {
@@ -27,7 +30,5 @@
 }
 
 .social__icon {
-  width: 20px;
-  height: 20px;
   fill: currentColor;
 }

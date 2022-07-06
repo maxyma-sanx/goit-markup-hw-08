@@ -29,36 +29,50 @@
           ><span class="logo__text">Web</span>Studio</a
         >
 
-        <nav class="header__nav">
-          <ul class="header__list list-reset">
-            <li class="header__item">
-              <a class="header__link header__link--current link-reset" href="#">Студия</a>
-            </li>
+        <button
+          class="header__toggle toggle btn-reset js-open-menu"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="toggle__icon" width="40" height="40">
+            <use href="./images/icons/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
 
-            <li class="header__item">
-              <a class="header__link link-reset" href="./portfolio.html">Портфолио</a>
-            </li>
+        <div class="header__menu">
+          <nav class="header__nav">
+            <ul class="header__list list-reset">
+              <li class="header__item">
+                <a class="header__link header__link--current link-reset" href="#">Студия</a>
+              </li>
 
-            <li class="header__item">
-              <a class="header__link link-reset" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+              <li class="header__item">
+                <a class="header__link link-reset" href="./portfolio.html">Портфолио</a>
+              </li>
 
-        <div class="header__contacts">
-          <a class="header__info link-reset" href="mailto:info@devstudio.com" aria-label="Почта">
-            <svg class="header__icon header__icon--mail">
-              <use href="./images/icons/sprite.svg#icon-envelope"></use>
-            </svg>
-            info@devstudio.com
-          </a>
+              <li class="header__item">
+                <a class="header__link link-reset" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
 
-          <a class="header__info link-reset" href="tel:+380961111111" aria-label="Номер телефона">
-            <svg class="header__icon header__icon--phone">
-              <use href="./images/icons/sprite.svg#icon-smartphone"></use>
-            </svg>
-            +38 096 111 11 11
-          </a>
+          <div class="header__contacts">
+            <a class="header__info link-reset" href="mailto:info@devstudio.com" aria-label="Почта">
+              <svg class="header__icon" width="16" height="12">
+                <use href="./images/icons/sprite.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+
+            <a class="header__info link-reset" href="tel:+380961111111" aria-label="Номер телефона">
+              <svg class="header__icon" width="10" height="16">
+                <use href="./images/icons/sprite.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -77,7 +91,7 @@
           <ul class="features__list list-reset">
             <li class="features__item">
               <div class="features__container">
-                <svg class="features__icon">
+                <svg class="features__icon" width="70" height="70">
                   <use href="./images/icons/sprite.svg#icon-antenna"></use>
                 </svg>
               </div>
@@ -89,7 +103,7 @@
 
             <li class="features__item">
               <div class="features__container">
-                <svg class="features__icon">
+                <svg class="features__icon" width="70" height="70">
                   <use href="./images/icons/sprite.svg#icon-clock"></use>
                 </svg>
               </div>
@@ -101,7 +115,7 @@
 
             <li class="features__item">
               <div class="features__container">
-                <svg class="features__icon">
+                <svg class="features__icon" width="70" height="70">
                   <use href="./images/icons/sprite.svg#icon-diagram"></use>
                 </svg>
               </div>
@@ -113,7 +127,7 @@
 
             <li class="features__item">
               <div class="features__container">
-                <svg class="features__icon">
+                <svg class="features__icon" width="70" height="70">
                   <use href="./images/icons/sprite.svg#icon-astronaut"></use>
                 </svg>
               </div>
@@ -131,35 +145,62 @@
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="about__list list-reset">
             <li class="about__item">
-              <img
-                class="about__img"
-                src="./images/main/feature-01.jpg"
-                alt="Десктопные приложения"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main/feature/feature-01-desktop.jpg    1x,
+                    ./images/main/feature/feature-01-desktop@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="about__img"
+                  src="./images/main/feature/feature-01-desktop.jpg"
+                  alt="Десктопные приложения"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+              <source />
               <p class="about__text">Десктопные приложения</p>
             </li>
 
             <li class="about__item">
-              <img
-                class="about__img"
-                src="./images/main/feature-02.jpg"
-                alt="Мобильные приложения"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main/feature/feature-02-desktop.jpg    1x,
+                    ./images/main/feature/feature-02-desktop@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="about__img"
+                  src="./images/main/feature/feature-02-desktop.jpg"
+                  alt="Мобильные приложения"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+              <source />
               <p class="about__text">Мобильные приложения</p>
             </li>
 
             <li class="about__item">
-              <img
-                class="about__img"
-                src="./images/main/feature-03.jpg"
-                alt="Дизайнерские решения"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main/feature/feature-03-desktop.jpg    1x,
+                    ./images/main/feature/feature-03-desktop@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="about__img"
+                  src="./images/main/feature/feature-03-desktop.jpg"
+                  alt="Дизайнерские решения"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+              <source />
               <p class="about__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -171,13 +212,39 @@
           <h2 class="title">Наша команда</h2>
           <ul class="command__list list-reset">
             <li class="command__item">
-              <img
-                class="command__img"
-                src="./images/main/our-command-01.jpg"
-                alt="Product Designer Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main/command/command-01-desktop.jpg    1x,
+                    ./images/main/command/command-01-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/main/command/command-01-tablet.jpg    1x,
+                    ./images/main/command/command-01-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/main/command/command-01-mobile.jpg    1x,
+                    ./images/main/command/command-01-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="command__img"
+                  src="./images/main/command/command-01-mobile.jpg"
+                  alt="Product Designer Игорь Демьяненко"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="command__content">
                 <h3 class="command__title">Игорь Демьяненко</h3>
                 <p class="command__descr" lang="en">Product Designer</p>
@@ -188,7 +255,7 @@
                       href="#"
                       aria-label="Инстаграм Игоря Демьяненко"
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
@@ -199,7 +266,7 @@
                       href="#"
                       aria-label="Твиттер Игоря Демьяненко "
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
@@ -210,7 +277,7 @@
                       href="#"
                       aria-label="Фейсбук Игоря Демьяненко"
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
@@ -221,7 +288,7 @@
                       href="#"
                       aria-label="Линкедин Игоря Демьяненко"
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-linkedin"></use>
                       </svg>
                     </a>
@@ -231,13 +298,39 @@
             </li>
 
             <li class="command__item">
-              <img
-                class="command__img"
-                src="./images/main/our-command-02.jpg"
-                alt="Frontend Developer Ольга Репина"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main/command/command-02-desktop.jpg    1x,
+                    ./images/main/command/command-02-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/main/command/command-02-tablet.jpg    1x,
+                    ./images/main/command/command-02-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/main/command/command-02-mobile.jpg    1x,
+                    ./images/main/command/command-02-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="command__img"
+                  src="./images/main/command/command-02-mobile.jpg"
+                  alt="Frontend Developer Ольга Репина"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="command__content">
                 <h3 class="command__title">Ольга Репина</h3>
                 <p class="command__descr" lang="en">Frontend Developer</p>
@@ -248,7 +341,7 @@
                       href="#"
                       aria-label="Инстаграм Ольги Репины"
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
@@ -259,7 +352,7 @@
                       href="#"
                       aria-label="Твиттер Ольги Репины"
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
@@ -270,7 +363,7 @@
                       href="#"
                       aria-label="Фейсбук Ольги Репины"
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
@@ -281,7 +374,7 @@
                       href="#"
                       aria-label="Линкедин Ольги Репины"
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-linkedin"></use>
                       </svg>
                     </a>
@@ -291,13 +384,39 @@
             </li>
 
             <li class="command__item">
-              <img
-                class="command__img"
-                src="./images/main/our-command-03.jpg"
-                alt="Marketing Николай Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main/command/command-03-desktop.jpg    1x,
+                    ./images/main/command/command-03-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/main/command/command-03-tablet.jpg    1x,
+                    ./images/main/command/command-03-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/main/command/command-03-mobile.jpg    1x,
+                    ./images/main/command/command-03-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="command__img"
+                  src="./images/main/command/command-03-mobile.jpg"
+                  alt="Marketing Николай Тарасов"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="command__content">
                 <h3 class="command__title">Николай Тарасов</h3>
                 <p class="command__descr" lang="en">Marketing</p>
@@ -308,7 +427,7 @@
                       href="#"
                       aria-label="Инстаграм Николая Тарасова"
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
@@ -319,7 +438,7 @@
                       href="#"
                       aria-label="Твиттер Николая Тарасова"
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
@@ -330,7 +449,7 @@
                       href="#"
                       aria-label="Фейсбук Николая Тарасова"
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
@@ -341,7 +460,7 @@
                       href="#"
                       aria-label="Линкедин Николая Тарасова"
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-linkedin"></use>
                       </svg>
                     </a>
@@ -351,13 +470,39 @@
             </li>
 
             <li class="command__item">
-              <img
-                class="command__img"
-                src="./images/main/our-command-04.jpg"
-                alt="UI Designer Михаил Ермаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main/command/command-04-desktop.jpg    1x,
+                    ./images/main/command/command-04-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/main/command/command-04-tablet.jpg    1x,
+                    ./images/main/command/command-04-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/main/command/command-04-mobile.jpg    1x,
+                    ./images/main/command/command-04-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="command__img"
+                  src="./images/main/command/command-04-mobile.jpg"
+                  alt="UI Designer Михаил Ермаков"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="command__content">
                 <h3 class="command__title">Михаил Ермаков</h3>
                 <p class="command__descr" lang="en">UI Designer</p>
@@ -368,7 +513,7 @@
                       href="#"
                       aria-label="Инстаграм Михаила Ермакова"
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
@@ -379,7 +524,7 @@
                       href="#"
                       aria-label="Твиттер Михаила Ермакова"
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
@@ -390,7 +535,7 @@
                       href="#"
                       aria-label="Фейсбук Михаила Ермакова"
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
@@ -401,7 +546,7 @@
                       href="#"
                       aria-label="Линкедин Михаила Ермакова"
                     >
-                      <svg class="social__icon">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/icons/sprite.svg#icon-linkedin"></use>
                       </svg>
                     </a>
@@ -419,42 +564,42 @@
           <ul class="clients__list list-reset">
             <li class="clients__item">
               <a class="clients__link link-reset" href="#" aria-label="Бренд №1">
-                <svg class="clients__icon">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons/sprite.svg#icon-brand-01"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
               <a class="clients__link link-reset" href="#" aria-label="Бренд №2">
-                <svg class="clients__icon">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons/sprite.svg#icon-brand-02"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
               <a class="clients__link link-reset" href="#" aria-label="Бренд №3">
-                <svg class="clients__icon">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons/sprite.svg#icon-brand-03"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
               <a class="clients__link link-reset" href="#" aria-label="Бренд №4">
-                <svg class="clients__icon">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons/sprite.svg#icon-brand-04"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
               <a class="clients__link link-reset" href="#" aria-label="Бренд №5">
-                <svg class="clients__icon">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons/sprite.svg#icon-brand-05"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
               <a class="clients__link link-reset" href="#" aria-label="Бренд №6">
-                <svg class="clients__icon">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons/sprite.svg#icon-brand-06"></use>
                 </svg>
               </a>
@@ -467,86 +612,89 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__container">
-          <div class="footer__contacts">
-            <a class="logo footer__logo link-reset" href="#">
-              <span class="logo__text">Web</span>Studio
-            </a>
+          <div class="footer__details">
+            <div class="footer__contacts">
+              <a class="logo footer__logo link-reset" href="#">
+                <span class="logo__text">Web</span>Studio
+              </a>
 
-            <address class="footer__address">
-              <ul class="footer__list list-reset">
-                <li class="footer__item">
+              <address class="footer__address">
+                <ul class="footer__list list-reset">
+                  <li class="footer__item">
+                    <a
+                      class="footer__info footer__info--address link-reset"
+                      href="https://goo.gl/maps/jzjgvNHyo2qF3V4f9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >г. Киев, пр-т Леси Украинки, 26</a
+                    >
+                  </li>
+
+                  <li class="footer__item">
+                    <a class="footer__info link-reset" href="mailto:info@example.com"
+                      >info@example.com</a
+                    >
+                  </li>
+
+                  <li class="footer__item">
+                    <a class="footer__info link-reset" href="tel:+380991111111"
+                      >+38 099 111 11 11</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+
+            <div class="footer__social">
+              <h3 class="footer__title">Присоединяйтесь</h3>
+              <ul class="social list-reset">
+                <li class="social__item">
                   <a
-                    class="footer__info footer__info--address link-reset"
-                    href="https://goo.gl/maps/jzjgvNHyo2qF3V4f9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >г. Киев, пр-т Леси Украинки, 26</a
+                    class="social__link social__link social__link--dark"
+                    href="#"
+                    aria-label="Наш Инстаграм"
                   >
+                    <svg class="social__icon" width="20" height="20">
+                      <use href="./images/icons/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
                 </li>
-
-                <li class="footer__item">
-                  <a class="footer__info link-reset" href="mailto:info@example.com"
-                    >info@example.com</a
+                <li class="social__item">
+                  <a
+                    class="social__link social__link social__link--dark"
+                    href="#"
+                    aria-label="Наш Твиттер"
                   >
+                    <svg class="social__icon" width="20" height="20">
+                      <use href="./images/icons/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
                 </li>
-
-                <li class="footer__item">
-                  <a class="footer__info link-reset" href="tel:+380991111111">+38 099 111 11 11</a>
+                <li class="social__item">
+                  <a
+                    class="social__link social__link social__link--dark"
+                    href="#"
+                    aria-label="Наш Фейсбук"
+                  >
+                    <svg class="social__icon" width="20" height="20">
+                      <use href="./images/icons/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a
+                    class="social__link social__link social__link--dark"
+                    href="#"
+                    aria-label="Наш Линкедин"
+                  >
+                    <svg class="social__icon" width="20" height="20">
+                      <use href="./images/icons/sprite.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
-            </address>
+            </div>
           </div>
-
-          <div class="footer__social">
-            <h3 class="footer__title">Присоединяйтесь</h3>
-            <ul class="social list-reset">
-              <li class="social__item">
-                <a
-                  class="social__link social__link social__link--dark"
-                  href="#"
-                  aria-label="Наш Инстаграм"
-                >
-                  <svg class="social__icon">
-                    <use href="./images/icons/sprite.svg#icon-instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a
-                  class="social__link social__link social__link--dark"
-                  href="#"
-                  aria-label="Наш Твиттер"
-                >
-                  <svg class="social__icon">
-                    <use href="./images/icons/sprite.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a
-                  class="social__link social__link social__link--dark"
-                  href="#"
-                  aria-label="Наш Фейсбук"
-                >
-                  <svg class="social__icon">
-                    <use href="./images/icons/sprite.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a
-                  class="social__link social__link social__link--dark"
-                  href="#"
-                  aria-label="Наш Линкедин"
-                >
-                  <svg class="social__icon">
-                    <use href="./images/icons/sprite.svg#icon-linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-
           <form class="footer__form">
             <label class="footer__title" for="footer-email">Подпишитесь на рассылку</label>
             <div class="footer__sub">
@@ -559,7 +707,7 @@
               />
               <button class="btn btn--sub btn-reset" type="submit">
                 Подписаться
-                <svg class="btn-icon">
+                <svg class="btn-icon" width="24" height="24">
                   <use href="./images/icons/icons.svg#icon-subscribe"></use>
                 </svg>
               </button>
@@ -570,14 +718,14 @@
     </footer>
 
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
+      <section class="modal">
         <button
           class="modal__close-btn btn-reset"
           type="button"
           aria-label="Закрыть"
           data-modal-close
         >
-          <svg class="modal__close-icon">
+          <svg class="modal__close-icon" width="11" height="11">
             <use href="./images/icons/sprite.svg#icon-close"></use>
           </svg>
         </button>
@@ -586,7 +734,7 @@
           <label class="modal__label">
             Имя
             <input class="modal__field modal__field--input" type="text" name="user-name" />
-            <svg class="modal__icon">
+            <svg class="modal__icon" width="18" height="18">
               <use href="./images/icons/icons.svg#icon-modal-name"></use>
             </svg>
           </label>
@@ -594,7 +742,7 @@
           <label class="modal__label">
             Телефон
             <input class="modal__field modal__field--input" type="tel" name="user-tel" />
-            <svg class="modal__icon">
+            <svg class="modal__icon" width="18" height="18">
               <use href="./images/icons/icons.svg#icon-modal-phone"></use>
             </svg>
           </label>
@@ -602,7 +750,7 @@
           <label class="modal__label">
             Почта
             <input class="modal__field modal__field--input" type="email" name="user-email" />
-            <svg class="modal__icon">
+            <svg class="modal__icon" width="18" height="18">
               <use href="./images/icons/icons.svg#icon-modal-email"></use>
             </svg>
           </label>
@@ -618,16 +766,87 @@
 
           <label class="modal__check-label">
             <input class="modal__check-input" type="checkbox" name="user-agree" />
-            Соглашаюсь с рассылкой и принимаю&nbsp;<a class="modal__check-link" href="#"
-              >Условия договора</a
-            >
+            <p class="modal__check-agree">
+              Соглашаюсь с рассылкой и принимаю&nbsp;<a class="modal__check-link" href="#"
+                >Условия договора</a
+              >
+            </p>
             <span class="modal__check-icon"></span>
           </label>
           <button class="btn btn--modal btn-reset" type="submit">Отправить</button>
         </form>
-      </div>
+      </section>
     </div>
 
+    <section class="mobile js-menu-container" id="mobile-menu">
+      <div class="container">
+        <div class="mobile__container">
+          <ul class="mobile__list list-reset">
+            <li class="mobile__item">
+              <a class="mobile__link mobile__link--current link-reset" href="#">Студия</a>
+            </li>
+
+            <li class="mobile__item">
+              <a class="mobile__link link-reset" href="./portfolio.html">Портфолио</a>
+            </li>
+
+            <li class="mobile__item">
+              <a class="mobile__link link-reset" href="#">Контакты</a>
+            </li>
+          </ul>
+
+          <div class="mobile__contacts">
+            <a
+              class="mobile__phone link-reset"
+              href="tel:+380961111111"
+              aria-label="Номер телефона"
+            >
+              +38 096 111 11 11
+            </a>
+
+            <a class="mobile__email link-reset" href="mailto:info@devstudio.com" aria-label="Почта">
+              info@devstudio.com
+            </a>
+          </div>
+
+          <ul class="mobile__social list-reset">
+            <li class="mobile__social-item">
+              <a class="mobile__social-link link-reset" href="#">Instagram</a>
+            </li>
+
+            <li class="mobile__social-item">
+              <a class="mobile__social-link link-reset" href="#">Twitter</a>
+            </li>
+
+            <li class="mobile__social-item">
+              <a class="mobile__social-link link-reset" href="#">Facebook</a>
+            </li>
+
+            <li class="mobile__social-item">
+              <a class="mobile__social-link link-reset" href="#">LinkedIn</a>
+            </li>
+          </ul>
+
+          <button
+            class="mobile__toggle toggle btn-reset js-close-menu"
+            type="button"
+            aria-label="Закрыть меню"
+          >
+            <svg class="toggle__icon" width="40" height="40">
+              <use href="./images/icons/icons.svg#icon-burger-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

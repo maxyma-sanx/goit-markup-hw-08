@@ -90,19 +90,19 @@
 
 .mobile__social-item {
   position: relative;
-}
 
-.mobile__social-item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -10px;
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
 
-  display: block;
-  width: 1px;
-  height: 22px;
+    display: block;
+    width: 1px;
+    height: 22px;
 
-  background-color: rgba($color-secondary, 0.2);
+    background-color: rgba($color-secondary, 0.2);
+  }
 }
 
 .mobile__social {

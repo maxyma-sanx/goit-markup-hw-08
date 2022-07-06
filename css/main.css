@@ -911,7 +911,6 @@ p {
 .mobile__social-item {
   position: relative;
 }
-
 .mobile__social-item:not(:last-child)::after {
   content: "";
   position: absolute;
